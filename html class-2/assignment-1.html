@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+
+<h2>Registration Form</h2>
+
+<form action="/submit-registration" method="post" enctype="multipart/form-data">
+    <div>
+        <label for="full-name">Full Name:</label>
+        <input type="text" id="full-name" name="full-name" required>
+    </div>
+
+    <div>
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" maxlength="20" required>
+    </div>
+
+    <div>
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" id="confirm-password" name="confirm-password" maxlength="20" required>
+    </div>
+
+    <div>
+        <label for="birthdate">Birthdate:</label>
+        <input type="date" id="birthdate" name="birthdate" required min="1900-01-01" max="<?php echo date('Y-m-d'); ?>">
+    </div>
+
+    <div>
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="">Select your gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+    </div>
+
+    <div>
+        <span>Subscription:</span>
+        <label>
+            <input type="radio" name="subscription" value="free" required> Free
+        </label>
+        <label>
+            <input type="radio" name="subscription" value="basic"> Basic
+        </label>
+        <label>
+            <input type="radio" name="subscription" value="premium"> Premium
+        </label>
+    </div>
+
+    <div>
+        <span>Hobbies:</span>
+        <label>
+            <input type="checkbox" name="hobbies" value="reading"> Reading
+        </label>
+        <label>
+            <input type="checkbox" name="hobbies" value="traveling"> Traveling
+        </label>
+        <label>
+            <input type="checkbox" name="hobbies" value="coding"> Coding
+        </label>
+        <label>
+            <input type="checkbox" name="hobbies" value="sports"> Sports
+        </label>
+    </div>
+
+    <div>
+        <label for="profile-picture">Profile Picture:</label>
+        <input type="file" id="profile-picture" name="profile-picture" accept="image/jpeg, image/png" required>
+    </div>
+
+    <div>
+        <input type="submit" value="Register">
+    </div>
+</form>
+
+</body>
+</html>
