@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Complex Form Layout</title>
+</head>
+<body>
+
+<h2>Complex Form Layout with Nested Tables and Lists</h2>
+
+<form action="/submit-your-form-handler" method="post">
+    <!-- Main Table -->
+    <table border="1" cellspacing="0" cellpadding="5" style="border-collapse: collapse; width: 80%; margin: auto;">
+        <tr>
+            <!-- First Cell of the First Row with Nested Table -->
+            <td>
+                <!-- Nested Table -->
+                <table border="1" cellspacing="0" cellpadding="5" style="border-collapse: collapse; width: 100%;">
+                    <tr>
+                        <td><label for="first-name">First Name:</label></td>
+                        <td><input type="text" id="first-name" name="first-name" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="last-name">Last Name:</label></td>
+                        <td><input type="text" id="last-name" name="last-name" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="country">Country:</label></td>
+                        <td>
+                            <select id="country" name="country" required>
+                                <option value="">Select a country</option>
+                                <option value="usa">United States</option>
+                                <option value="canada">Canada</option>
+                                <option value="uk">United Kingdom</option>
+                                <!-- Add more countries as needed -->
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <!-- Second Cell of the First Row with Unordered List -->
+            <td>
+                <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                    <!-- Add more list items as needed -->
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <!-- First Cell of the Second Row with Text Area -->
+            <td>
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" rows="4" cols="50" required></textarea>
+            </td>
+            <!-- Second Cell of the Second Row with Submit and Reset Buttons -->
+            <td style="text-align: center;">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>

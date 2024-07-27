@@ -1,40 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form in Table</title>
+   
+    <title>Form Structured in Table</title>
 </head>
 <body>
-   <center>
-    <table border="1" cellspacing="0">
-        <thead>
-            <tr>
-               <th>User Name</th>
-               <th>User Email</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>
-                    <label for="User Name"></label>
-                    <input type="text">
-                </td>
-                <td>
-                    <label for="Email"></label>
-                    <input type="email">
-                  
-                </td>
-               
-                </tr>
-                
-            </tr>
-        </tbody>
-    </table>
-</center>
-<center>
-    <button>Submit</button>
+    <h2>Form Structured in Table</h2>
+    <table border="1" cellspacing="0" cellpadding="5">
+     
+<!-- this is for first row  -->
+        <tr>
+            <td><label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name" required></td>
+            <td><label for="Email">Email:</label>
+            <input type="text" id="Email" name="Email" required></td>
+        </tr>
 
-   </center> 
+<!-- this is for second row -->
+        <tr>
+            <td>
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" rows="2" cols="50" required></textarea>
+            </td>
+            <td style="text-align: center;">
+                <input type="submit" value="Submit">
+            </td>
+        </tr>
+    
 </body>
 </html>
