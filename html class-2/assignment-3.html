@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Order Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .form-container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .form-container div {
+            margin-bottom: 15px;
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-container input,
+        .form-container select,
+        .form-container textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .form-container input[type="number"] {
+            width: auto;
+        }
+        .form-container .payment-options label {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .form-container .inline-block {
+            display: inline-block;
+            vertical-align: top;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Product Order Form</h2>
+
+<div class="form-container">
+    <form id="order-form">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div>
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div>
+            <label for="category">Product Category:</label>
+            <select id="category" name="category" onchange="updateProducts()" required>
+                <option value="">Select a category</option>
+                <option value="electronics">Electronics</option>
+                <option value="books">Books</option>
+                <option value="clothing">Clothing</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="product">Product:</label>
+            <select id="product" name="product" required>
+                <option value="">Select a product</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="10" step="1" required>
+        </div>
+
+        <div>
+            <label for="delivery-date">Preferred Delivery Date:</label>
+            <input type="date" id="delivery-date" name="delivery-date" min="<?php echo date('Y-m-d'); ?>" required>
+        </div>
+
+        <div>
+            <label for="delivery-time">Preferred Delivery Time:</label>
+            <input type="time" id="delivery-time" name="delivery-time" required>
+        </div>
+
+        <div>
+            <label for="notes">Additional Notes:</label>
+            <textarea id="notes" name="notes" rows="4"></textarea>
+        </div>
+
+        <div class="payment-options">
+            <span>Payment Options:</span>
+            <label><input type="checkbox" name="payment" value="credit-card"> Credit Card</label>
+            <label><input type="checkbox" name="payment" value="paypal"> PayPal</label>
+            <label><input type="checkbox" name="payment" value="bank-transfer"> Bank Transfer</label>
+        </div>
+
+        <div>
+            <input type="submit" value="Submit Order">
+        </div>
+    </form>
+</div>
+
+<script>
+    function updateProducts() {
+        const category = document.getElementById('category').value;
+        const productDropdown = document.getElementById('product');
+
+        // Clear previous options
+        productDropdown.innerHTML = '<option value="">Select a product</option>';
+
+        let products = [];
+
+        if (category === 'electronics') {
+            products = ['Laptop', 'Smartphone', 'Tablet'];
+        } else if (category === 'books') {
+            products = ['Fiction', 'Non-Fiction', 'Biography'];
+        } else if (category === 'clothing') {
+            products = ['T-Shirt', 'Jeans', 'Jacket'];
+        }
+
+        products.forEach(product => {
+            const option = document.createElement('option');
+            option.value = product.toLowerCase();
+            option.textContent = product;
+            productDropdown.appendChild(option);
+        });
+    }
+</script>
+
+</body>
+</html>

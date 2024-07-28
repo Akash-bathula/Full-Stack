@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .form-container div {
+            margin-bottom: 15px;
+        }
+        .form-container label {
+            display: inline-block;
+            width: 150px;
+            font-weight: bold;
+        }
+        .form-container input[type="text"],
+        .form-container input[type="email"],
+        .form-container textarea,
+        .form-container input[type="range"] {
+            width: calc(100% - 160px); /* Adjust width to account for label */
+            padding: 8px;
+            box-sizing: border-box;
+            display: inline-block;
+        }
+        .form-container textarea {
+            height: 80px;
+        }
+        .form-container input[type="radio"],
+        .form-container input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .form-container .feedback-policy-link {
+            display: inline;
+        }
+        .form-container .feedback-policy {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        .form-container .inline-block {
+            display: inline-block;
+            vertical-align: top;
+        }
+        .form-container .range-container {
+            display: inline-block;
+            width: calc(100% - 160px); /* Adjust width to account for label */
+            vertical-align: top;
+        }
+        .form-container .range-container span {
+            display: block;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Feedback Form</h2>
+
+<div class="form-container">
+    <form action="/submit-feedback" method="post" enctype="multipart/form-data">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div>
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div>
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments" placeholder="Enter your feedback here"></textarea>
+        </div>
+
+        <div>
+            <label for="rating">Rate our service (0 to 10):</label>
+            <div class="range-container">
+                <input type="range" id="rating" name="rating" min="0" max="10" step="1" value="5" 
+                    oninput="document.getElementById('rating-value').innerText = this.value">
+                <span id="rating-value">5</span>
+            </div>
+        </div>
+
+        <div>
+            <label>Feedback Type:</label>
+            <div class="inline-block">
+                <label><input type="radio" name="feedback-type" value="compliment" required> Compliment</label>
+            </div>
+            <div class="inline-block">
+                <label><input type="radio" name="feedback-type" value="complaint"> Complaint</label>
+            </div>
+            <div class="inline-block">
+                <label><input type="radio" name="feedback-type" value="suggestion"> Suggestion</label>
+            </div>
+        </div>
+
+        <div>
+            <label><input type="checkbox" name="agree-policy" required> I agree to the 
+            <a href="#feedback-policy" class="feedback-policy-link"><u>feedback policy</u></a>.</label>
+        </div>
+
+        <div>
+            <input type="submit" value="Submit Feedback">
+        </div>
+    </form>
+
+    <div id="feedback-policy" class="feedback-policy">
+        <h3>Feedback Policy</h3>
+        <p><strong>Important:</strong> <em>Your feedback helps us improve our services. Please provide honest and constructive comments.</em></p>
+        <p><u>Your feedback will be reviewed by our team and used to enhance the quality of our service.</u></p>
+    </div>
+</div>
+
+</body>
+</html>
