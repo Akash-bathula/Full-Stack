@@ -1,0 +1,149 @@
+h2,p{
+    text-align: center;
+}
+body{
+    background-color: rgb(246, 246, 246)
+}
+
+.movies{
+    width: 1300px; 
+    display: flex;
+    margin-inline: auto;
+}
+
+.movie{
+    width: 1300px; 
+    display: flex;
+    margin-inline: auto;
+}
+
+.m-1{
+    width: 400px; 
+    border: 1px solid rgb(230, 229, 229);
+     background-color: white;
+}
+
+#M1{
+    width: 400px;
+}
+
+.n1{
+    padding: 20px;
+}
+#b1{
+              padding: 5px 15px;
+              background-color: #81d4fa;
+              border: none;
+              display: block;
+              margin-inline: auto;
+}
+
+.m-2{
+    width: 400px; 
+    border: 1px solid rgb(230, 229, 229);
+     background-color: white;
+}
+
+#M2{
+    width: 400px;
+}
+
+.n2{
+    padding: 20px;
+}
+
+#b2{
+            padding: 5px 15px;
+              background-color: #81d4fa;
+              border: none;
+              display: block;
+              margin-inline: auto;
+}
+
+.m-3{
+    width: 400px; 
+    border: 1px solid rgb(230, 229, 229);
+     background-color: white;
+}
+
+#M3{
+    width: 400px;
+}
+
+.n3{
+    padding: 20px;
+}
+
+#b3{
+            padding: 5px 15px;
+              background-color: #81d4fa;
+              border: none;
+              display: block;
+              margin-inline: auto;
+}
+
+.m-4{
+    width: 400px; 
+    border: 1px solid rgb(230, 229, 229);
+     background-color: white;
+}
+
+#M4{
+    width: 400px;
+}
+
+.n4{
+    padding: 20px;
+}
+
+#b4{
+            padding: 5px 15px;
+              background-color: #81d4fa;
+              border: none;
+              display: block;
+              margin-inline: auto;
+}
+
+.m-5{
+    width: 400px; 
+    border: 1px solid rgb(230, 229, 229);
+     background-color: white;
+}
+
+#M5{
+    width: 400px;
+}
+
+.n5{
+    padding: 20px;
+}
+
+#b5{
+            padding: 5px 15px;
+              background-color: #81d4fa;
+              border: none;
+              display: block;
+              margin-inline: auto;
+}
+
+.m-6{
+    width: 400px; 
+    border: 1px solid rgb(230, 229, 229);
+     background-color: white;
+}
+
+#M6{
+    width: 400px;
+}
+
+.n6{
+    padding: 20px;
+}
+
+#b6{
+            padding: 5px 15px;
+              background-color: #81d4fa;
+              border: none;
+              display: block;
+              margin-inline: auto;
+}
