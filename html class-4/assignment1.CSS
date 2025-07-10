@@ -1,0 +1,42 @@
+h3{
+    padding-left: 10px;
+}
+p{
+   padding-left: 10px;
+   font-size:small;
+    color: red;
+}
+ body{
+    background-color: black;
+ }
+
+ .articles{
+    width: 1500px;
+   height: auto;
+    padding-left: 100px;
+    padding-inline-end: 0%;
+    display: flex;
+    margin-inline: auto;
+}
+
+.a1{
+    width: 300px;
+    padding: 10px;
+    background-color: white;
+}
+
+#A1{
+    width: 300px;
+}
+Ar1{
+    padding: 20px;
+}
+
+.article{
+    width: 1500px;
+    max-height: max-content;
+    padding-left: 100px;
+    padding-inline-end: 0%;
+    display: flex;
+    margin-inline: auto;
+}
